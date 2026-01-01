@@ -79,7 +79,10 @@ module TorchDL
         outputs = parallel_apply(@replicas, scattered_inputs, scattered_kwargs)
 
         # Ensure all CUDA operations complete before gathering
-        Torch::CUDA.synchronize if Torch::CUDA.available?
+        # Note: synchronize requires torch-rb with CUDA sync support
+        if Torch::CUDA.available? && Torch::CUDA.respond_to?(:synchronize)
+          Torch::CUDA.synchronize
+        end
 
         # Gather outputs back to output device
         gather(outputs, @output_device_string, @dim)

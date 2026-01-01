@@ -104,6 +104,11 @@ TorchDL.gather(tensors, "cuda:0", dim)
 - torch.rb 0.17+
 - Multiple CUDA GPUs
 
+## Notes
+
+- Works with stock torch.rb from RubyGems
+- For optimal performance, use a torch.rb build with `Torch::CUDA.synchronize` support (ensures CUDA operations complete before gathering)
+
 ## License
 
 MIT

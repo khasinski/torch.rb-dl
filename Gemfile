@@ -5,5 +5,5 @@ gemspec
 gem "rake"
 gem "minitest"
 
-# For local development, use the local torch.rb
+# For development, use local torch.rb
 gem "torch-rb", path: "../torch.rb"
