@@ -1,5 +1,6 @@
 require "torch"
 require_relative "torch_dl/version"
+require_relative "torch_dl/cuda"
 require_relative "torch_dl/ext"
 require_relative "torch_dl/nn/parallel/replicate"
 require_relative "torch_dl/nn/parallel/parallel_apply"

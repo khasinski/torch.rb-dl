@@ -107,7 +107,8 @@ TorchDL.gather(tensors, "cuda:0", dim)
 ## Notes
 
 - Works with stock torch.rb from RubyGems
-- For optimal performance, use a torch.rb build with `Torch::CUDA.synchronize` support (ensures CUDA operations complete before gathering)
+- Uses FFI (fiddle) to call CUDA runtime directly for `synchronize`, `current_device`, and `set_device`
+- No C extension required - pure Ruby gem
 
 ## License
 

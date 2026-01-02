@@ -20,4 +20,5 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "torch-rb", ">= 0.17"
+  spec.add_dependency "fiddle"  # For CUDA runtime calls
 end
