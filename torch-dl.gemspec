@@ -8,7 +8,7 @@ Gem::Specification.new do |spec|
 
   spec.summary = "Multi-GPU training for torch.rb"
   spec.description = "DataParallel and distributed training utilities for torch.rb. Split batches across multiple GPUs automatically."
-  spec.homepage = "https://github.com/khasinski/torch-rb-dl"
+  spec.homepage = "https://github.com/khasinski/torch.rb-dl"
   spec.license = "MIT"
   spec.required_ruby_version = ">= 3.1"
 
